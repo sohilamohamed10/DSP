@@ -411,7 +411,7 @@ class Ui_MainWindow(object):
     def Open_file(self,flag):
         global F1, F2, F3,data2, data3, data1, time
         options = QFileDialog.Options()
-        fileName, _ = QFileDialog.getOpenFileName(None,"Open File", r"E:\CUFE\Signals","Signals(*.csv)", options=options)
+        fileName, _ = QFileDialog.getOpenFileName(None,"Open File", r"\Signals","Signals(*.csv)", options=options)
         data_set=pd.read_csv(fileName,header=1)
         data_set=data_set[1:].astype(float)
         File =data_set.iloc[:,0]
